@@ -52,11 +52,11 @@ export function Institutions() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.22em] text-[#6b6862] mb-5">
+          <div className="text-xs font-mono uppercase tracking-[0.22em] text-[#5a6580] mb-5">
             In use at
           </div>
           <h2 className="serif text-5xl sm:text-7xl text-balance">
-            Institutions <span className="serif-italic text-[#2b3a52]">deploying</span> AirPoint.
+            Institutions <span className="serif-italic text-[#2c5cb8]">deploying</span> AirPoint.
           </h2>
         </motion.div>
 
@@ -70,10 +70,10 @@ export function Institutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="grid grid-cols-[auto_1fr] gap-5 py-8 border-t border-[#e3ddd0] first:border-t-0 first:pt-0"
+                className="grid grid-cols-[auto_1fr] gap-5 py-8 border-t border-[#d8e0ec] first:border-t-0 first:pt-0"
               >
                 <div className="flex flex-col items-center gap-3">
-                  <div className="text-[10px] font-mono text-[#9a9489] tracking-wider">
+                  <div className="text-[10px] font-mono text-[#7a8499] tracking-wider">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   <div
@@ -106,19 +106,19 @@ export function Institutions() {
                         {STATUS_LABELS[inst.status]}
                       </span>
                     )}
-                    <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#9a9489]">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#7a8499]">
                       est. {inst.est}
                     </span>
                   </div>
 
-                  <h3 className="serif text-3xl sm:text-4xl text-[#181818] tracking-tight leading-none mb-2">
+                  <h3 className="serif text-3xl sm:text-4xl text-[#0c1b3a] tracking-tight leading-none mb-2">
                     {inst.name}
                   </h3>
-                  <div className="text-xs font-mono text-[#6b6862] tracking-wide mb-4 flex items-center gap-2">
+                  <div className="text-xs font-mono text-[#5a6580] tracking-wide mb-4 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full" style={{ background: ACCENT }} />
                     {inst.city}, {inst.country}
                   </div>
-                  <p className="text-sm text-[#3b3b3b] leading-relaxed text-balance">
+                  <p className="text-sm text-[#3a4566] leading-relaxed text-balance">
                     {inst.description}
                   </p>
                 </div>
@@ -131,29 +131,29 @@ export function Institutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="border-t border-[#e3ddd0] pt-8 mt-2 grid grid-cols-[auto_1fr] gap-5"
+              className="border-t border-[#d8e0ec] pt-8 mt-2 grid grid-cols-[auto_1fr] gap-5"
             >
               <div className="flex flex-col items-center gap-3">
-                <div className="text-[10px] font-mono text-[#9a9489] tracking-wider">
+                <div className="text-[10px] font-mono text-[#7a8499] tracking-wider">
                   {String(INSTITUTIONS.length + 1).padStart(2, "0")}
                 </div>
-                <div className="w-16 h-16 rounded-xl border border-dashed border-[#c8bfb0] flex items-center justify-center">
-                  <span className="serif-italic text-2xl text-[#9a9489]">+</span>
+                <div className="w-16 h-16 rounded-xl border border-dashed border-[#bcc7d8] flex items-center justify-center">
+                  <span className="serif-italic text-2xl text-[#7a8499]">+</span>
                 </div>
               </div>
               <div>
-                <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#9a9489] mb-2">
+                <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#7a8499] mb-2">
                   Your institution
                 </div>
-                <h3 className="serif text-2xl sm:text-3xl text-[#181818] mb-2">
+                <h3 className="serif text-2xl sm:text-3xl text-[#0c1b3a] mb-2">
                   Deploy AirPoint at your school.
                 </h3>
-                <p className="text-sm text-[#3b3b3b] leading-relaxed mb-3 text-balance">
+                <p className="text-sm text-[#3a4566] leading-relaxed mb-3 text-balance">
                   Free, supported, ready to install on any computer with a webcam.
                 </p>
                 <a
                   href="mailto:kavinvenkatesanofficial@gmail.com"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[#181818] underline decoration-[#daaf7a]/60 underline-offset-4 hover:decoration-[#daaf7a] transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#0c1b3a] underline decoration-[#daaf7a]/60 underline-offset-4 hover:decoration-[#daaf7a] transition-colors"
                 >
                   kavinvenkatesanofficial@gmail.com
                   <span>→</span>

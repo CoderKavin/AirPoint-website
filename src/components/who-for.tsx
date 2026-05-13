@@ -32,15 +32,15 @@ export function WhoFor() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-20"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#6b6862] mb-5">
+          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#5a6580] mb-5">
             Who it is for
           </div>
           <h2 className="serif text-5xl sm:text-7xl text-balance">
             For hands that don&apos;t move
             <br />
-            the way a mouse <span className="serif-italic text-[#2b3a52]">expects.</span>
+            the way a mouse <span className="serif-italic text-[#2c5cb8]">expects.</span>
           </h2>
-          <p className="mt-7 text-[#3b3b3b] text-lg sm:text-xl text-balance leading-relaxed max-w-2xl">
+          <p className="mt-7 text-[#3a4566] text-lg sm:text-xl text-balance leading-relaxed max-w-2xl">
             A mouse needs a steady grip, a precise click, and a smooth slide
             across a surface. Plenty of people can&apos;t do all three. AirPoint
             asks for one thing only, that you can hold your hand in front of a
@@ -48,7 +48,7 @@ export function WhoFor() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#e3ddd0] rounded-2xl overflow-hidden border border-[#e3ddd0]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#d8e0ec] rounded-2xl overflow-hidden border border-[#d8e0ec]">
           {AUDIENCES.map((a, i) => (
             <motion.div
               key={a.title}
@@ -56,13 +56,13 @@ export function WhoFor() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="p-10 bg-[#fdfbf6]"
+              className="p-10 bg-[#ffffff]"
             >
-              <div className="text-2xl font-medium tracking-tight mb-3 text-[#181818]">
+              <div className="text-2xl font-medium tracking-tight mb-3 text-[#0c1b3a]">
                 {a.title}
               </div>
               <p
-                className="text-[#3b3b3b] leading-relaxed"
+                className="text-[#3a4566] leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: a.body }}
               />
             </motion.div>

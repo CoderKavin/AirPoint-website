@@ -45,15 +45,15 @@ export function Technical() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-20"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#6b6862] mb-5">
+          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#5a6580] mb-5">
             Under the hood
           </div>
           <h2 className="serif text-5xl sm:text-7xl text-balance">
-            Not a demo. <span className="serif-italic text-[#2b3a52]">A tool.</span>
+            Not a demo. <span className="serif-italic text-[#2c5cb8]">A tool.</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#e3ddd0] rounded-2xl overflow-hidden border border-[#e3ddd0]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#d8e0ec] rounded-2xl overflow-hidden border border-[#d8e0ec]">
           {FEATURES.map((f, i) => (
             <motion.div
               key={f.tag}
@@ -61,25 +61,25 @@ export function Technical() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="p-10 bg-[#fdfbf6]"
+              className="p-10 bg-[#ffffff]"
             >
               <div className="flex items-start justify-between gap-4 mb-6">
-                <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#2b3a52]">
+                <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#2c5cb8]">
                   {f.tag}
                 </div>
                 {f.metric && (
                   <div className="text-right">
-                    <div className="font-mono text-xl text-[#181818]">{f.metric}</div>
-                    <div className="text-[10px] uppercase tracking-wider text-[#6b6862] mt-0.5">
+                    <div className="font-mono text-xl text-[#0c1b3a]">{f.metric}</div>
+                    <div className="text-[10px] uppercase tracking-wider text-[#5a6580] mt-0.5">
                       {f.metricLabel}
                     </div>
                   </div>
                 )}
               </div>
-              <h3 className="serif text-3xl mb-3 text-balance text-[#181818]">
+              <h3 className="serif text-3xl mb-3 text-balance text-[#0c1b3a]">
                 {f.title}
               </h3>
-              <p className="text-[#3b3b3b] leading-relaxed">{f.body}</p>
+              <p className="text-[#3a4566] leading-relaxed">{f.body}</p>
             </motion.div>
           ))}
         </div>
@@ -91,12 +91,12 @@ export function Technical() {
           transition={{ duration: 0.8 }}
           className="mt-20 text-center"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#6b6862] mb-6">
+          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#5a6580] mb-6">
             Built with
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-3 text-[#3b3b3b]">
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-3 text-[#3a4566]">
             {["MediaPipe", "OpenCV", "PyAutoGUI", "PyQt5", "Python"].map((t) => (
-              <span key={t} className="font-medium tracking-wide hover:text-[#181818] transition-colors">
+              <span key={t} className="font-medium tracking-wide hover:text-[#0c1b3a] transition-colors">
                 {t}
               </span>
             ))}

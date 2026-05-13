@@ -99,14 +99,14 @@ function DownloadCard({
       rel="noopener noreferrer"
       className="group flex items-center gap-4 p-5 rounded-xl border border-[#2a2a2a] bg-[#1f1f1f] hover:bg-[#262626] hover:border-[#3f3f3f] transition-colors text-left"
     >
-      <div className="shrink-0 w-11 h-11 rounded-lg bg-[#0a0a0a] flex items-center justify-center text-[#f8f5ef]">
+      <div className="shrink-0 w-11 h-11 rounded-lg bg-[#0a0a0a] flex items-center justify-center text-[#eef3fa]">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
-        <div className="font-medium text-[#f8f5ef]">Download for {platform}</div>
+        <div className="font-medium text-[#eef3fa]">Download for {platform}</div>
         <div className="text-xs text-[#8a857c] font-mono mt-0.5 truncate">{sub}</div>
       </div>
-      <div className="text-[#8a857c] group-hover:text-[#f8f5ef] group-hover:translate-x-0.5 transition-all">
+      <div className="text-[#8a857c] group-hover:text-[#eef3fa] group-hover:translate-x-0.5 transition-all">
         ↓
       </div>
     </a>

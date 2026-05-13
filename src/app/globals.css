@@ -28,42 +28,42 @@
   --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-/* Force light editorial palette regardless of OS dark mode. */
+/* Force the cool blue editorial palette regardless of OS dark mode. */
 :root,
 :root.dark {
   color-scheme: light;
-  --background: #f8f5ef;
-  --foreground: #181818;
+  --background: #eef3fa;
+  --foreground: #0c1b3a;
   --card: #ffffff;
-  --card-foreground: #181818;
-  --muted: #f0ece4;
-  --muted-foreground: #6b6862;
-  --accent: #2b3a52;
+  --card-foreground: #0c1b3a;
+  --muted: #e4ecf8;
+  --muted-foreground: #5a6580;
+  --accent: #2c5cb8;
   --accent-foreground: #ffffff;
-  --primary: #181818;
-  --primary-foreground: #f8f5ef;
-  --border: #e3ddd0;
-  --input: #e3ddd0;
-  --ring: #2b3a52;
+  --primary: #0c1b3a;
+  --primary-foreground: #eef3fa;
+  --border: #d8e0ec;
+  --input: #d8e0ec;
+  --ring: #2c5cb8;
   --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: light;
-    --background: #f8f5ef;
-    --foreground: #181818;
+    --background: #eef3fa;
+    --foreground: #0c1b3a;
     --card: #ffffff;
-    --card-foreground: #181818;
-    --muted: #f0ece4;
-    --muted-foreground: #6b6862;
-    --accent: #2b3a52;
+    --card-foreground: #0c1b3a;
+    --muted: #e4ecf8;
+    --muted-foreground: #5a6580;
+    --accent: #2c5cb8;
     --accent-foreground: #ffffff;
-    --primary: #181818;
-    --primary-foreground: #f8f5ef;
-    --border: #e3ddd0;
-    --input: #e3ddd0;
-    --ring: #2b3a52;
+    --primary: #0c1b3a;
+    --primary-foreground: #eef3fa;
+    --border: #d8e0ec;
+    --input: #d8e0ec;
+    --ring: #2c5cb8;
     --radius: 0.5rem;
   }
 }
@@ -73,26 +73,25 @@
     @apply border-border outline-ring/50;
   }
   html {
-    background: #f8f5ef !important;
-    color: #181818;
+    background: #eef3fa !important;
+    color: #0c1b3a;
     color-scheme: light;
     scroll-behavior: smooth;
     font-family: var(--font-sans), system-ui, sans-serif;
     font-feature-settings: "ss01", "cv11", "cv02";
   }
   body {
-    background: #f8f5ef !important;
-    color: #181818;
+    background: #eef3fa !important;
+    color: #0c1b3a;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
   ::selection {
-    background: #d6ccbb;
-    color: #181818;
+    background: #c2d4f0;
+    color: #0c1b3a;
   }
 }
 
-/* Editorial serif headline. Falls back to system serif if Instrument Serif fails to load. */
 .serif {
   font-family: var(--font-serif), "Cormorant Garamond", "Iowan Old Style", "Apple Garamond", "Times New Roman", serif;
   font-weight: 400;
@@ -106,7 +105,7 @@
   font-weight: 400;
 }
 
-/* Subtle paper texture for the cream sections. */
+/* Subtle paper texture (kept, looks fine on the blue too). */
 .paper {
   position: relative;
 }
@@ -115,19 +114,18 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
 }
 
-/* Pulsing dot used by Live indicator. */
+/* Pulsing dot. */
 @keyframes pulse-ring {
-  0% { box-shadow: 0 0 0 0 rgba(40, 200, 64, 0.45); }
-  70% { box-shadow: 0 0 0 6px rgba(40, 200, 64, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(40, 200, 64, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(44, 92, 184, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(44, 92, 184, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(44, 92, 184, 0); }
 }
 .pulse-ring { animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 
-/* Slow drift used by ambient blobs. */
 @keyframes drift {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(40px, -30px) scale(1.04); }
@@ -135,7 +133,6 @@
 }
 .drift-slow { animation: drift 28s ease-in-out infinite; }
 
-/* Hairline divider. */
 .hairline {
   height: 1px;
   background: var(--border);

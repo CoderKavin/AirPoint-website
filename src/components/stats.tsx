@@ -40,7 +40,7 @@ function Counter({ value, suffix }: { value: number; suffix?: string }) {
   return (
     <span ref={ref} className="tabular-nums">
       {shown}
-      {suffix && <span className="text-3xl ml-1 text-[#6b6862]">{suffix}</span>}
+      {suffix && <span className="text-3xl ml-1 text-[#5a6580]">{suffix}</span>}
     </span>
   );
 }
@@ -54,12 +54,12 @@ export function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="text-center text-xs font-mono uppercase tracking-[0.22em] text-[#6b6862] mb-16"
+          className="text-center text-xs font-mono uppercase tracking-[0.22em] text-[#5a6580] mb-16"
         >
           By the numbers
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#e3ddd0] rounded-2xl overflow-hidden border border-[#e3ddd0]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#d8e0ec] rounded-2xl overflow-hidden border border-[#d8e0ec]">
           {STATS.map((s, i) => (
             <motion.div
               key={s.label}
@@ -67,13 +67,13 @@ export function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="p-8 bg-[#fdfbf6] text-center"
+              className="p-8 bg-[#ffffff] text-center"
             >
-              <div className="serif text-6xl sm:text-7xl text-[#181818] mb-3">
+              <div className="serif text-6xl sm:text-7xl text-[#0c1b3a] mb-3">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
-              <div className="text-sm font-medium text-[#181818] mb-1">{s.label}</div>
-              <div className="text-xs text-[#6b6862] leading-relaxed text-balance">{s.sub}</div>
+              <div className="text-sm font-medium text-[#0c1b3a] mb-1">{s.label}</div>
+              <div className="text-xs text-[#5a6580] leading-relaxed text-balance">{s.sub}</div>
             </motion.div>
           ))}
         </div>

@@ -37,21 +37,21 @@ export function Calibration() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 lg:sticky lg:top-32"
           >
-            <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#6b6862] mb-5">
+            <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#5a6580] mb-5">
               Calibration
             </div>
             <h2 className="serif text-5xl sm:text-7xl text-balance">
-              The software adapts <span className="serif-italic text-[#2b3a52]">to you.</span>
+              The software adapts <span className="serif-italic text-[#2c5cb8]">to you.</span>
             </h2>
-            <p className="mt-7 text-[#3b3b3b] text-lg sm:text-xl text-balance leading-relaxed">
+            <p className="mt-7 text-[#3a4566] text-lg sm:text-xl text-balance leading-relaxed">
               The first time you open AirPoint, a thirty second wizard learns
               how your hand moves. Your reachable area becomes your full
               screen. Your normal tremor becomes the cursor dead zone. Your
               version of a pinch becomes the click. It saves to a per user
               profile, so the next person who needs it gets their own.
             </p>
-            <div className="mt-8 flex items-center gap-3 text-sm text-[#6b6862]">
-              <span className="inline-block w-8 h-px bg-[#2b3a52]/40" />
+            <div className="mt-8 flex items-center gap-3 text-sm text-[#5a6580]">
+              <span className="inline-block w-8 h-px bg-[#2c5cb8]/40" />
               <span>One time setup, about thirty seconds.</span>
             </div>
           </motion.div>
@@ -64,16 +64,16 @@ export function Calibration() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                className="group flex gap-6 p-8 rounded-2xl border border-[#e3ddd0] bg-[#fdfbf6] hover:border-[#2b3a52]/40 transition-colors"
+                className="group flex gap-6 p-8 rounded-2xl border border-[#d8e0ec] bg-[#ffffff] hover:border-[#2c5cb8]/40 transition-colors"
               >
-                <div className="shrink-0 font-mono text-[#2b3a52] text-sm tracking-wider pt-1">
+                <div className="shrink-0 font-mono text-[#2c5cb8] text-sm tracking-wider pt-1">
                   {s.n}
                 </div>
                 <div>
-                  <div className="text-xl font-medium mb-2 tracking-tight text-[#181818]">
+                  <div className="text-xl font-medium mb-2 tracking-tight text-[#0c1b3a]">
                     {s.title}
                   </div>
-                  <p className="text-[#3b3b3b] leading-relaxed">{s.body}</p>
+                  <p className="text-[#3a4566] leading-relaxed">{s.body}</p>
                 </div>
               </motion.div>
             ))}

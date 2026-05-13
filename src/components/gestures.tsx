@@ -39,7 +39,7 @@ const CARDS: Card[] = [
 
 export function Gestures() {
   return (
-    <section id="how-it-works" className="relative py-32 bg-[#f0ece4]">
+    <section id="how-it-works" className="relative py-32 bg-[#e4ecf8]">
       <div className="max-w-[1240px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,13 +48,13 @@ export function Gestures() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mb-16"
         >
-          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#6b6862] mb-5">
+          <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#5a6580] mb-5">
             Four gestures
           </div>
           <h2 className="serif text-5xl sm:text-7xl text-balance">
-            The whole mouse, <span className="serif-italic text-[#2b3a52]">with one hand.</span>
+            The whole mouse, <span className="serif-italic text-[#2c5cb8]">with one hand.</span>
           </h2>
-          <p className="mt-7 text-[#3b3b3b] text-lg sm:text-xl text-balance leading-relaxed">
+          <p className="mt-7 text-[#3a4566] text-lg sm:text-xl text-balance leading-relaxed">
             Forgiving on purpose. Calibration tunes each one to the shape your
             hand can actually make.
           </p>
@@ -68,17 +68,17 @@ export function Gestures() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="p-8 rounded-2xl border border-[#e3ddd0] bg-[#fdfbf6]"
+              className="p-8 rounded-2xl border border-[#d8e0ec] bg-[#ffffff]"
             >
               <div className="mb-5 h-12 flex items-end">
-                <HandIcon gesture={c.gesture} size="44px" />
+                <HandIcon gesture={c.gesture} sizePx={44} />
               </div>
-              <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#6b6862] mb-2">
+              <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#5a6580] mb-2">
                 {c.title}
               </div>
-              <div className="text-xl font-medium mb-2 text-[#181818]">{c.action}</div>
+              <div className="text-xl font-medium mb-2 text-[#0c1b3a]">{c.action}</div>
               <p
-                className="text-sm text-[#3b3b3b] leading-relaxed"
+                className="text-sm text-[#3a4566] leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: c.detail }}
               />
             </motion.div>

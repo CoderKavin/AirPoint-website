@@ -69,10 +69,10 @@ export function ProductWindow() {
             <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
             <div className="w-3 h-3 rounded-full bg-[#28c840]" />
           </div>
-          <div className="flex-1 text-center text-[11px] text-[#9a958a] font-mono tracking-wide">
+          <div className="flex-1 text-center text-[11px] text-[#7a8499] font-mono tracking-wide">
             AirPoint
           </div>
-          <div className="flex items-center gap-1.5 text-[11px] text-[#9a958a]">
+          <div className="flex items-center gap-1.5 text-[11px] text-[#7a8499]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#28c840] pulse-ring" />
             Live
           </div>
@@ -178,10 +178,10 @@ export function ProductWindow() {
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                   className="flex flex-col gap-1"
                 >
-                  <div className="text-3xl font-medium tracking-tight text-[#f0ece4]">
+                  <div className="text-3xl font-medium tracking-tight text-[#e4ecf8]">
                     {gesture.label}
                   </div>
-                  <div className="text-sm text-[#9a958a]">{gesture.sub}</div>
+                  <div className="text-sm text-[#7a8499]">{gesture.sub}</div>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -208,7 +208,7 @@ export function ProductWindow() {
               <div className="text-[9px] text-[#555] font-mono uppercase tracking-[0.2em] mb-2">
                 Profile · Kavin
               </div>
-              <div className="flex items-center gap-2 text-[10px] text-[#9a958a]">
+              <div className="flex items-center gap-2 text-[10px] text-[#7a8499]">
                 <div className="flex-1 h-1 rounded-full bg-[#1a1a1a] overflow-hidden">
                   <div className="h-full w-[78%] bg-gradient-to-r from-[#9ad4e3]/40 to-[#9ad4e3]" />
                 </div>

@@ -2,7 +2,7 @@ import { ReleaseButtons } from "./release-buttons";
 
 export function Downloads() {
   return (
-    <section id="download" className="relative py-32 bg-[#181818] text-[#f8f5ef]">
+    <section id="download" className="relative py-32 bg-[#0c1b3a] text-[#eef3fa]">
       <div className="relative max-w-3xl mx-auto px-6 text-center">
         <div className="text-xs font-mono uppercase tracking-[0.18em] text-[#8a857c] mb-5">
           Get AirPoint

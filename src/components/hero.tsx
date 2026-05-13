@@ -20,7 +20,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-xs font-mono uppercase tracking-[0.22em] text-[#6b6862] mb-8"
+          className="text-center text-xs font-mono uppercase tracking-[0.22em] text-[#5a6580] mb-8"
         >
           AirPoint
         </motion.div>
@@ -29,7 +29,7 @@ export function Hero() {
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.06, delayChildren: 0.2 }}
-          className="serif text-center text-balance text-[#181818]"
+          className="serif text-center text-balance text-[#0c1b3a]"
           style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)" }}
         >
           <div className="flex flex-wrap justify-center gap-x-[0.3em] gap-y-1">
@@ -48,7 +48,7 @@ export function Hero() {
             <motion.span
               variants={word}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="serif-italic text-[#2b3a52]"
+              className="serif-italic text-[#2c5cb8]"
             >
               differently.
             </motion.span>
@@ -59,7 +59,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.85 }}
-          className="mt-8 max-w-2xl mx-auto text-center text-base sm:text-lg text-[#3b3b3b] text-balance leading-relaxed"
+          className="mt-8 max-w-2xl mx-auto text-center text-base sm:text-lg text-[#3a4566] text-balance leading-relaxed"
         >
           AirPoint is a free, open source way to use your computer with a
           webcam and your hand. It was built with cerebral palsy in mind, and
@@ -74,14 +74,14 @@ export function Hero() {
         >
           <a
             href="#download"
-            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#181818] text-[#f8f5ef] text-sm font-medium hover:bg-[#2b3a52] transition-colors"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0c1b3a] text-[#eef3fa] text-sm font-medium hover:bg-[#2c5cb8] transition-colors"
           >
             Download free
             <span className="transition-transform group-hover:translate-x-0.5">→</span>
           </a>
           <a
             href="#how-it-works"
-            className="inline-flex items-center gap-1.5 px-2 text-sm font-medium text-[#181818] hover:opacity-70 transition-opacity"
+            className="inline-flex items-center gap-1.5 px-2 text-sm font-medium text-[#0c1b3a] hover:opacity-70 transition-opacity"
           >
             See how it works
             <span>→</span>
@@ -92,7 +92,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.25 }}
-          className="mt-5 text-center text-[11px] text-[#6b6862] font-mono tracking-wide"
+          className="mt-5 text-center text-[11px] text-[#5a6580] font-mono tracking-wide"
         >
           macOS &amp; Windows · No account · Nothing leaves your device
         </motion.div>
