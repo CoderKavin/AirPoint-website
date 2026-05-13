@@ -1,26 +1,142 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
   --font-mono: var(--font-geist-mono);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+/* Force light editorial palette regardless of OS dark mode. */
+:root,
+:root.dark {
+  color-scheme: light;
+  --background: #f8f5ef;
+  --foreground: #181818;
+  --card: #ffffff;
+  --card-foreground: #181818;
+  --muted: #f0ece4;
+  --muted-foreground: #6b6862;
+  --accent: #2b3a52;
+  --accent-foreground: #ffffff;
+  --primary: #181818;
+  --primary-foreground: #f8f5ef;
+  --border: #e3ddd0;
+  --input: #e3ddd0;
+  --ring: #2b3a52;
+  --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light;
+    --background: #f8f5ef;
+    --foreground: #181818;
+    --card: #ffffff;
+    --card-foreground: #181818;
+    --muted: #f0ece4;
+    --muted-foreground: #6b6862;
+    --accent: #2b3a52;
+    --accent-foreground: #ffffff;
+    --primary: #181818;
+    --primary-foreground: #f8f5ef;
+    --border: #e3ddd0;
+    --input: #e3ddd0;
+    --ring: #2b3a52;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    background: #f8f5ef !important;
+    color: #181818;
+    color-scheme: light;
+    scroll-behavior: smooth;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11", "cv02";
+  }
+  body {
+    background: #f8f5ef !important;
+    color: #181818;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: #d6ccbb;
+    color: #181818;
+  }
+}
+
+/* Editorial serif headline. Falls back to system serif if Instrument Serif fails to load. */
+.serif {
+  font-family: var(--font-serif), "Cormorant Garamond", "Iowan Old Style", "Apple Garamond", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  font-feature-settings: "kern", "liga", "calt";
+}
+.serif-italic {
+  font-family: var(--font-serif), "Cormorant Garamond", "Iowan Old Style", "Apple Garamond", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Subtle paper texture for the cream sections. */
+.paper {
+  position: relative;
+}
+.paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+}
+
+/* Pulsing dot used by Live indicator. */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(40, 200, 64, 0.45); }
+  70% { box-shadow: 0 0 0 6px rgba(40, 200, 64, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(40, 200, 64, 0); }
+}
+.pulse-ring { animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Slow drift used by ambient blobs. */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.04); }
+  66% { transform: translate(-30px, 40px) scale(0.97); }
+}
+.drift-slow { animation: drift 28s ease-in-out infinite; }
+
+/* Hairline divider. */
+.hairline {
+  height: 1px;
+  background: var(--border);
 }
