@@ -13,8 +13,8 @@ export function Downloads() {
           <span className="serif-italic text-[#9ad4e3]">For everyone.</span>
         </h2>
         <p className="text-[#c8c2b6] text-lg sm:text-xl text-balance mb-14 max-w-xl mx-auto leading-relaxed">
-          Apache 2.0 licensed. No account, no tracking, no payment.
-          Accessibility shouldn&apos;t cost anything.
+          No account, no tracking, no payment. Accessibility shouldn&apos;t
+          cost anything.
         </p>
 
         <ReleaseButtons />

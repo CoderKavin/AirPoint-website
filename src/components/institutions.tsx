@@ -125,39 +125,62 @@ export function Institutions() {
               </motion.article>
             ))}
 
-            {/* CTA row */}
+            {/* CTA card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="border-t border-[#d8e0ec] pt-8 mt-2 grid grid-cols-[auto_1fr] gap-5"
+              className="relative mt-4 overflow-hidden rounded-2xl"
+              style={{
+                background:
+                  "linear-gradient(135deg, #0c1b3a 0%, #1a2e5a 50%, #2c5cb8 100%)",
+              }}
             >
-              <div className="flex flex-col items-center gap-3">
-                <div className="text-[10px] font-mono text-[#7a8499] tracking-wider">
-                  {String(INSTITUTIONS.length + 1).padStart(2, "0")}
+              {/* Subtle inner sheen */}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+              {/* Atmospheric glow */}
+              <div
+                className="absolute -top-24 -right-24 w-72 h-72 rounded-full pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(154,212,227,0.30) 0%, transparent 65%)",
+                  filter: "blur(12px)",
+                }}
+              />
+
+              <div className="relative p-8 sm:p-10">
+                <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-[#9ad4e3] mb-5 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#9ad4e3] pulse-ring" />
+                  Open for partners
                 </div>
-                <div className="w-16 h-16 rounded-xl border border-dashed border-[#bcc7d8] flex items-center justify-center">
-                  <span className="serif-italic text-2xl text-[#7a8499]">+</span>
-                </div>
-              </div>
-              <div>
-                <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#7a8499] mb-2">
-                  Your institution
-                </div>
-                <h3 className="serif text-2xl sm:text-3xl text-[#0c1b3a] mb-2">
-                  Deploy AirPoint at your school.
+
+                <h3 className="serif text-3xl sm:text-4xl text-white mb-3 leading-tight">
+                  Bring AirPoint to{" "}
+                  <span className="serif-italic text-[#9ad4e3]">your students.</span>
                 </h3>
-                <p className="text-sm text-[#3a4566] leading-relaxed mb-3 text-balance">
-                  Free, supported, ready to install on any computer with a webcam.
+
+                <p className="text-[#c8d2e8] leading-relaxed mb-7 text-balance">
+                  Free, supported, and ready to deploy on any computer with a
+                  webcam. We&apos;ll help with setup, training material, and
+                  remote walkthroughs for your team.
                 </p>
-                <a
-                  href="mailto:kavinvenkatesanofficial@gmail.com"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[#0c1b3a] underline decoration-[#daaf7a]/60 underline-offset-4 hover:decoration-[#daaf7a] transition-colors"
-                >
-                  kavinvenkatesanofficial@gmail.com
-                  <span>→</span>
-                </a>
+
+                <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
+                  <a
+                    href="mailto:kavinvenkatesanofficial@gmail.com?subject=Deploying%20AirPoint%20at%20our%20institution"
+                    className="group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-[#0c1b3a] text-sm font-medium hover:bg-[#9ad4e3] transition-colors"
+                  >
+                    Get in touch
+                    <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                  </a>
+                  <a
+                    href="mailto:kavinvenkatesanofficial@gmail.com"
+                    className="text-sm font-mono text-[#9ad4e3]/85 tracking-wide hover:text-white transition-colors"
+                  >
+                    kavinvenkatesanofficial@gmail.com
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>

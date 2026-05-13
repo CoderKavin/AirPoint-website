@@ -12,7 +12,7 @@ export function Footer() {
             height={24}
             className="rounded-md"
           />
-          <span className="text-[#5a6580]">AirPoint · Apache 2.0</span>
+          <span className="text-[#5a6580]">AirPoint</span>
         </div>
 
         <div className="text-[#5a6580]">
