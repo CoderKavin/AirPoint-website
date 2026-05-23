@@ -33,7 +33,7 @@ const INSTITUTIONS: Institution[] = [
     country: "India",
     est: "1997",
     description:
-      "The National Institute of Speech & Hearing — a premier autonomous institute under the Government of Kerala, offering higher education, rehabilitation, and research for people with hearing impairment and communication disorders.",
+      "A premier autonomous institute under the Government of Kerala, offering higher education, rehabilitation, and research for people with hearing impairment and communication disorders.",
     status: "partner",
     coords: [76.94, 8.55],
   },
@@ -135,74 +135,16 @@ export function Institutions() {
                 </div>
               </motion.article>
             ))}
-
-            {/* CTA card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative mt-4 overflow-hidden rounded-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, #0c1b3a 0%, #1a2e5a 50%, #2c5cb8 100%)",
-              }}
-            >
-              {/* Subtle inner sheen */}
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-              {/* Atmospheric glow */}
-              <div
-                className="absolute -top-24 -right-24 w-72 h-72 rounded-full pointer-events-none"
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(154,212,227,0.30) 0%, transparent 65%)",
-                  filter: "blur(12px)",
-                }}
-              />
-
-              <div className="relative p-8 sm:p-10">
-                <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-[#9ad4e3] mb-5 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9ad4e3] pulse-ring" />
-                  Open for partners
-                </div>
-
-                <h3 className="serif text-3xl sm:text-4xl text-white mb-3 leading-tight">
-                  Bring AirPoint to{" "}
-                  <span className="serif-italic text-[#9ad4e3]">your students.</span>
-                </h3>
-
-                <p className="text-[#c8d2e8] leading-relaxed mb-7 text-balance">
-                  Free, supported, and ready to deploy on any computer with a
-                  webcam. We&apos;ll help with setup, training material, and
-                  remote walkthroughs for your team.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-                  <a
-                    href="mailto:kavinvenkatesanofficial@gmail.com?subject=Deploying%20AirPoint%20at%20our%20institution"
-                    className="group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-[#0c1b3a] text-sm font-medium hover:bg-[#9ad4e3] transition-colors"
-                  >
-                    Get in touch
-                    <span className="transition-transform group-hover:translate-x-0.5">→</span>
-                  </a>
-                  <a
-                    href="mailto:kavinvenkatesanofficial@gmail.com"
-                    className="text-sm font-mono text-[#9ad4e3]/85 tracking-wide hover:text-white transition-colors"
-                  >
-                    kavinvenkatesanofficial@gmail.com
-                  </a>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
-          {/* Right: dark map card */}
+          {/* Right: dark map card + compact CTA */}
+          <div className="lg:col-span-7 flex flex-col gap-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 relative rounded-[1.5rem] overflow-hidden border border-[#1f1f1f] bg-[#0a0a0c] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)]"
+            className="relative rounded-[1.5rem] overflow-hidden border border-[#1f1f1f] bg-[#0a0a0c] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.5)]"
           >
             {/* Atmosphere glow */}
             <div
@@ -238,6 +180,58 @@ export function Institutions() {
               <DarkStat value="Free" label="Forever" />
             </div>
           </motion.div>
+
+          {/* Compact CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="relative overflow-hidden rounded-2xl"
+            style={{
+              background:
+                "linear-gradient(135deg, #0c1b3a 0%, #1a2e5a 50%, #2c5cb8 100%)",
+            }}
+          >
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+            <div
+              className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(154,212,227,0.30) 0%, transparent 65%)",
+                filter: "blur(12px)",
+              }}
+            />
+
+            <div className="relative p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+              <div className="min-w-0 sm:flex-1">
+                <div className="text-[10px] font-mono uppercase tracking-[0.22em] text-[#9ad4e3] mb-2 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#9ad4e3] pulse-ring" />
+                  Open for partners
+                </div>
+                <h3 className="serif text-2xl sm:text-3xl text-white leading-tight">
+                  Bring AirPoint to{" "}
+                  <span className="serif-italic text-[#9ad4e3]">your students.</span>
+                </h3>
+              </div>
+              <div className="flex flex-col gap-2 sm:items-end shrink-0">
+                <a
+                  href="mailto:kavinvenkatesanofficial@gmail.com?subject=Deploying%20AirPoint%20at%20our%20institution"
+                  className="group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-white text-[#0c1b3a] text-sm font-medium hover:bg-[#9ad4e3] transition-colors whitespace-nowrap"
+                >
+                  Get in touch
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                </a>
+                <a
+                  href="mailto:kavinvenkatesanofficial@gmail.com"
+                  className="text-[11px] font-mono text-[#9ad4e3]/85 tracking-wide hover:text-white transition-colors"
+                >
+                  kavinvenkatesanofficial@gmail.com
+                </a>
+              </div>
+            </div>
+          </motion.div>
+          </div>
         </div>
       </div>
     </section>
