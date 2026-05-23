@@ -67,25 +67,6 @@ export function WorldMap({ pins, accent = "#daaf7a" }: { pins: Pin[]; accent?: s
             />
             {/* Solid dot */}
             <circle r={3.5} fill={accent} stroke="#fdfbf6" strokeWidth={1} />
-            {/* Label */}
-            <text
-              y={-14}
-              textAnchor="middle"
-              style={{
-                fontFamily: "var(--font-mono), monospace",
-                fontSize: 12,
-                fontWeight: 500,
-                fill: "#f0ece4",
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                paintOrder: "stroke",
-                stroke: "#0a0a0c",
-                strokeWidth: 4,
-                strokeLinejoin: "round",
-              }}
-            >
-              {p.name}
-            </text>
           </Marker>
         ))}
       </ComposableMap>
