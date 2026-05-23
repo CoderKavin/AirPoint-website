@@ -26,6 +26,17 @@ const INSTITUTIONS: Institution[] = [
     status: "first",
     coords: [80.27, 13.08],
   },
+  {
+    monogram: "NISH",
+    name: "NISH",
+    city: "Trivandrum",
+    country: "India",
+    est: "1997",
+    description:
+      "The National Institute of Speech & Hearing — a premier autonomous institute under the Government of Kerala, offering higher education, rehabilitation, and research for people with hearing impairment and communication disorders.",
+    status: "partner",
+    coords: [76.94, 8.55],
+  },
 ];
 
 const STATUS_LABELS: Record<NonNullable<Institution["status"]>, string> = {
