@@ -44,7 +44,11 @@ export function ReleaseButtons() {
   }, []);
 
   const mac = release?.assets.find((a) => a.name.toLowerCase().endsWith(".dmg"));
-  const win = release?.assets.find((a) => a.name.toLowerCase().includes("windows") || a.name.toLowerCase().endsWith(".zip"));
+  // Prefer the Windows installer (AirPoint-Setup.exe); fall back to the raw zip
+  // for older releases that only shipped the folder build.
+  const win =
+    release?.assets.find((a) => a.name.toLowerCase().endsWith(".exe")) ??
+    release?.assets.find((a) => a.name.toLowerCase().includes("windows") || a.name.toLowerCase().endsWith(".zip"));
 
   const macUrl = mac?.url ?? "https://github.com/CoderKavin/AirPoint/releases/latest";
   const winUrl = win?.url ?? "https://github.com/CoderKavin/AirPoint/releases/latest";
