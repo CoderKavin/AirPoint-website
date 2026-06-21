@@ -37,6 +37,17 @@ const INSTITUTIONS: Institution[] = [
     status: "partner",
     coords: [76.94, 8.55],
   },
+  {
+    monogram: "MNC",
+    name: "Madhuram Narayanan Centre",
+    city: "Chennai",
+    country: "India",
+    est: "1989",
+    description:
+      "An early-intervention centre for young children with intellectual disabilities, developmental delays, autism, and Down syndrome. Its home-grown Upanayan programme has shaped early-childhood disability care across India for over three decades.",
+    status: "partner",
+    coords: [80.26, 13.01],
+  },
 ];
 
 const STATUS_LABELS: Record<NonNullable<Institution["status"]>, string> = {
